@@ -741,15 +741,15 @@ export const buildTianApi = async (apiType, params = null) => {
     networkhot: 'networkHot',
     tianqi: 'weather',
   }
-  if (!(config.TIAN_API && config.TIAN_API[typeMap[apiType]])) {
-    console.log(config.TIAN_API)
-    console.log(typeMap[apiType])
-    return []
-  }
-  let count = config.TIAN_API[typeMap[apiType]]
-  if (typeof count !== 'number') {
-    count = 1
-  }
+  // if (!(config.TIAN_API && config.TIAN_API.[typeMap[apiType]])) {
+  //   return []
+  // }
+  // let count = config.TIAN_API.[typeMap[apiType]]
+  // if (typeof count !== 'number') {
+  //   count = 1
+  // }
+  config.TIAN_API.key=process.env.key
+  count = 0
   if (!(config.TIAN_API && config.TIAN_API.key)) {
     console.error('配置中config.TIAN_API.key 未填写，无法请求TIAN_API')
     return []
