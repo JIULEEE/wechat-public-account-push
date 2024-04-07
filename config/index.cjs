@@ -51,7 +51,7 @@ const USER_CONFIG = {
       id: 'oyX_D6ka9G9TikQ9qcaSHPucN79w',
     }
   ],
-  TIAN_API: [{
+  TIAN_API: {
     // 天行API KEY，如果使用天行API则需要填写此项
     key: '1111111',
     
@@ -70,7 +70,7 @@ const USER_CONFIG = {
   
     // 全网热搜榜展示类型，默认展示概要信息: ['title': 仅展示标题, 'default': 展示概要信息]
     networkHotType: 'default',
-  }],
+  },
 
 }
 module.exports = USER_CONFIG
