@@ -748,7 +748,7 @@ export const buildTianApi = async (apiType, params = null) => {
   // if (typeof count !== 'number') {
   //   count = 1
   // }
-  config.TIAN_API.key=config.TIAN_API.key || process.env.TIAN_KEY
+  config.TIAN_API.key=process.env.TIAN_KEY
   console.error(config.TIAN_API.key)
   let count = 0
   if (!(config.TIAN_API && config.TIAN_API.key)) {
