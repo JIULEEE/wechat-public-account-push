@@ -763,7 +763,7 @@ export const buildTianApi = async (apiType, params = null) => {
   const res = await axios.get(url, {
     params: { key: process.env.key, ...params },
   }).catch((err) => err)
-
+console.error(`获取天行API接口 ${apiType} 发生错误: `, res.data || res)
   if (res && res.data && res.data.code === 200) {
     const result = (res.data.newslist || []).slice(0, count)
 
