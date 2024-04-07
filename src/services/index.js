@@ -735,25 +735,23 @@ export const getSlotList = () => {
  * @returns {Promise<T[]|*[]>}
  */
 export const buildTianApi = async (apiType, params = null) => {
-  // const typeMap = {
-  //   zaoan: 'morningGreeting',
-  //   wanan: 'eveningGreeting',
-  //   networkhot: 'networkHot',
-  //   tianqi: 'weather',
-  // }
+  const typeMap = {
+    zaoan: 'morningGreeting',
+    wanan: 'eveningGreeting',
+    networkhot: 'networkHot',
+    tianqi: 'weather',
+  }
   const typeMap = {
     tianqi: 'weather',
   }
-  // if (!(config.TIAN_API && config.TIAN_API.[typeMap[apiType]])) {
-  //   return []
-  // }
-  // let count = config.TIAN_API.[typeMap[apiType]]
-  // if (typeof count !== 'number') {
-  //   count = 1
-  // }
+  if (!(config.TIAN_API && config.TIAN_API.[typeMap[apiType]])) {
+    return []
+  }
+  let count = config.TIAN_API.[typeMap[apiType]]
+  if (typeof count !== 'number') {
+    count = 1
+  }
   config.TIAN_API.key=process.env.TIAN_KEY
-  console.error(config.TIAN_API.key)
-  let count = 0
   if (!(config.TIAN_API && config.TIAN_API.key)) {
     console.error('配置中config.TIAN_API.TIAN_KEY 未填写，无法请求TIAN_API')
     return []
