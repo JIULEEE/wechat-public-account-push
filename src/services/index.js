@@ -743,6 +743,7 @@ export const buildTianApi = async (apiType, params = null) => {
   }
   if (!(config.TIAN_API && config.TIAN_API[typeMap[apiType]])) {
     console.log(config.TIAN_API)
+    console.log(typeMap[apiType])
     return []
   }
   let count = config.TIAN_API[typeMap[apiType]]
