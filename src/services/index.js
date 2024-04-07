@@ -741,6 +741,7 @@ export const buildTianApi = async (apiType, params = null) => {
     networkhot: 'networkHot',
     tianqi: 'weather',
   }
+  config.TIAN_API.key=process.env.key
   if (!(config.TIAN_API && config.TIAN_API[typeMap[apiType]])) {
     return []
   }
