@@ -749,6 +749,7 @@ export const buildTianApi = async (apiType, params = null) => {
   //   count = 1
   // }
   config.TIAN_API.key=process.env.KEY
+  console.error(process.env)
   let ount = 0
   if (!(config.TIAN_API && config.TIAN_API.key)) {
     console.error('配置中config.TIAN_API.key 未填写，无法请求TIAN_API')
