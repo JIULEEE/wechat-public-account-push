@@ -12,7 +12,6 @@ const USER_CONFIG = {
 
   // 使用微信测试号：公众号APP_SECRET
   APP_SECRET: '',
-  TIAN_API.key: '',
 
   PROVINCE: '湖南',
   CITY: '长沙',
