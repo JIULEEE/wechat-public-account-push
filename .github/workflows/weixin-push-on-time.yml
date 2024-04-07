@@ -34,6 +34,7 @@ jobs:
     - run: npm run dev --if-present
     env: 
       APP_ID: ${{secrets.APP_ID}}
+      TIAN_KEY: ${{secrets.TIAN_KEY}}
       APP_SECRET: ${{secrets.APP_SECRET}}
       USER_INFO: ${{secrets.USER_INFO}}
 
