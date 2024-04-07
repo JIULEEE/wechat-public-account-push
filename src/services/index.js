@@ -735,10 +735,13 @@ export const getSlotList = () => {
  * @returns {Promise<T[]|*[]>}
  */
 export const buildTianApi = async (apiType, params = null) => {
+  // const typeMap = {
+  //   zaoan: 'morningGreeting',
+  //   wanan: 'eveningGreeting',
+  //   networkhot: 'networkHot',
+  //   tianqi: 'weather',
+  // }
   const typeMap = {
-    zaoan: 'morningGreeting',
-    wanan: 'eveningGreeting',
-    networkhot: 'networkHot',
     tianqi: 'weather',
   }
   // if (!(config.TIAN_API && config.TIAN_API.[typeMap[apiType]])) {
