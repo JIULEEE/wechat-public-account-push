@@ -742,12 +742,11 @@ export const buildTianApi = async (apiType, params = null) => {
     tianqi: 'weather',
   }
   if (!(config.TIAN_API && config.TIAN_API[typeMap[apiType]])) {
-    console.log(`1`)
+    console.log(config.TIAN_API)
     return []
   }
   let count = config.TIAN_API[typeMap[apiType]]
   if (typeof count !== 'number') {
-    console.log(`2`)
     count = 1
   }
   if (!(config.TIAN_API && config.TIAN_API.key)) {
